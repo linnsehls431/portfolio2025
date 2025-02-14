@@ -1,0 +1,144 @@
+/* Länkens styling */
+.back-link {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  font-size: 30px;
+  font-family: 'Barlow', sans-serif;
+  color: lightgrey;
+  padding: 0px;
+  transition: filter 0.3s ease;
+  text-decoration: none;
+}
+
+.mollyschedin {
+  color: lightgrey;
+  text-decoration: none;
+  transition: filter 0.3s ease;
+}
+
+.mollyschedin:hover {
+  filter: blur(2px);
+}
+
+.ollesvensson {
+  color: lightgrey;
+  text-decoration: none;
+  transition: filter 0.3s ease;
+}
+
+.ollesvensson:hover {
+  filter: blur(2px);
+}
+
+.Hemfarden {
+  position: absolute;
+  top: 163px;
+  left: 15px;
+  font-size: 15px;
+  font-family: 'Barlow', sans-serif;
+  color: lightgrey;
+  padding: 0px;
+  transition: filter 0.3s ease;
+  text-decoration: none;
+  max-width: 215px; /* Här kan du justera den maximala bredden för texten */
+  word-wrap: break-word; /* Se till att texten bryts ordentligt */
+}
+
+/* Länkens styling - för länken i .back-link */
+.back-link a {
+  color: lightgrey;
+  text-decoration: none; /* Tar bort understrykning */
+  transition: filter 0.3s ease;
+}
+
+.back-link a:hover {
+  filter: blur(2px);
+}
+
+/* Första kolumnen med bilder */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  padding-top: 10rem;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  max-width: 90%;
+}
+
+.image-wrapper {
+  position: relative;
+  max-width: 45%;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === STÖRRE LIGGANDE BILD === */
+.wide-image-wrapper {
+  position: relative;
+  width: 100%; /* Gör att den tar upp hela radens bredd */
+  max-width: calc(2 * 45% + 10px); /* Samma bredd som två vanliga bilder med gap */
+}
+
+.wide-image-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .Hemfarden {
+    font-size: 18px; /* Gör texten större */
+    text-align: left;
+    max-width: 90%; /* Gör textbredden bredare */
+    left: 47%;
+    transform: translateX(-50%);
+    position: relative; /* Se till att texten ligger innan bilderna */
+    z-index: 10; /* Gör att texten inte göms bakom bilder */
+    margin-bottom: 20px; /* Skapa lite utrymme under texten */
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem; /* Minska avståndet ovanför bilderna */
+    margin-top: 15rem; /* Skapa mer utrymme så att texten syns först */
+  }
+
+  .column {
+    flex-direction: column; /* Staplar bilder istället för två i bredd */
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .image-wrapper {
+    max-width: 100%; /* Se till att varje bild fyller hela bredden */
+  }
+
+  .image-wrapper img {
+    width: 100vw; /* Gör att bilderna täcker hela skärmen */
+    height: auto;
+    object-fit: cover;
+  }
+
+  .wide-image-wrapper {
+    width: 100vw; /* Se till att breda bilder också täcker hela skärmen */
+    max-width: 100%;
+  }
+
+  .wide-image-wrapper img {
+    width: 100vw;
+    height: auto;
+    object-fit: cover;
+  }
+}
